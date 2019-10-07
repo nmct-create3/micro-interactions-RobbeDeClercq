@@ -42,7 +42,7 @@
     /* global page settings */
     --global-html-color: var(--global-color-neutral-xxxx-dark);
     --global-html-backgroundColor: var(--global-color-neutral-xxxx-light);
-    --global-selection-backgroundColor: var(--global-color-alpha);    
+    --global-selection-backgroundColor: var(--global-color-alpha);
 
     /* borders */
     --global-borderRadius: 3px;
@@ -52,7 +52,7 @@
     --global-transitionTiming-alpha: .1s ease-out;
 
     /* Baseline settings */
-    --global-baseline: 8px;         
+    --global-baseline: 8px;
     --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
 
     --global-whitespace-xs: calc(var(--global-baseline) / 2); /* = 4px */
@@ -578,7 +578,7 @@ input::placeholder {
     overflow: auto; /* Fix margin collapse */
 }
 
-.c-card__footer {   
+.c-card__footer {
     text-align: center;
     border-top: 1px solid var(--card__footer-borderColor);
 }
@@ -617,7 +617,7 @@ input::placeholder {
     Class to put on all input="text" like form inputs
 */
 
-.c-input {       
+.c-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -684,7 +684,7 @@ more padding on the right to avoid overlap
     Class to put on form buttons or
 */
 
-.c-button {    
+.c-button {
     --button-borderColor: var(--global-color-alpha-dark);
     --button-hover-borderColor: var(--global-color-alpha-dark);
     --button-active-borderColor: var(--global-color-alpha-dark);
@@ -692,7 +692,7 @@ more padding on the right to avoid overlap
     --button-backgroundColor: var(--global-color-alpha);
     --button-hover-backgroundColor: var(--global-color-alpha-light);
     --button-active-backgroundColor: var(--global-color-alpha-dark);
-    --button-focus-backgroundColor: var(--global-color-alpha);    
+    --button-focus-backgroundColor: var(--global-color-alpha);
     --button-focus-boxShadow: var(--global-input-focus-boxShadow);
     font-size: 16px;
     font-weight: 600;
@@ -891,7 +891,7 @@ more padding on the right to avoid overlap
 .c-option--hidden:checked + .c-custom-toggle {
     --toggle-backgroundColor: var(--toggle-checked-backgroundColor);
     --toggle-borderColor: var(--toggle-checked-borderColor);
-    --toggle__switch-backgroundColor: var(--toggle__switch-checked-backgroundColor);    
+    --toggle__switch-backgroundColor: var(--toggle__switch-checked-backgroundColor);
 }
 
 .c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
@@ -935,6 +935,38 @@ more padding on the right to avoid overlap
     ---
     Password toggle custom checkbox
 */
+
+.c-password-toggle-container{
+  display: block;
+  position: relative;
+}
+
+.c-password-toggle__label{
+  width: var(--global-whitespace);
+  height: var(--global-whitespace);
+  position: absolute;
+  top: calc(var(--global-whitespace) / 2);
+  right: calc(var(--global-whitespace) / 2);
+  fill: var(--global-color-neutral-x-light);
+}
+
+.c-password-toggle__checkbox:checked + .c-password-toggle__label .c-password__symbol-hide{
+  display: none;
+}
+
+.c-password-toggle__checkbox:checked + .c-password-toggle__label .c-password__symbol-show{
+  display: block;
+}
+
+.c-password__symbol-show{
+  display: none;
+}
+
+.c-password__symbol-hide{
+  display: block;
+}
+
+
 
 /*------------------------------------*\
 #UTILITIES
