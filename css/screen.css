@@ -681,6 +681,12 @@ more padding on the right to avoid overlap
     padding-bottom: 0;
 }
 
+.c-label__error-message{
+  font-weight: 600;
+  float: right;
+  display: none;
+}
+
 /*
     Component: Button
     ---
